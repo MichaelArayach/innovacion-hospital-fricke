@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unidad de Innovación - Hospital Dr. Gustavo Fricke</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,40 +19,32 @@
       theme: {
         extend: {
           colors: {
-            gob: { blue: '#0033a0', red: '#ee3124', gray: '#f2f2f2', dark: '#333333' }
+            gob: { 
+              blue: '#006FB3',   /* Primario Oficial */
+              red: '#FE6565',    /* Secundario Oficial */
+              dark: '#0A132D',   /* Terciario Oficial */
+              title: '#111111',  /* Negro Oficial para Títulos */
+              text: '#4A4A4A',   /* Gris Oficial para Párrafos */
+              neutral: '#EEEEEE' /* Neutral Oficial */
+            }
           },
-          fontFamily: { sans: ['gobCL', 'system-ui', 'sans-serif'] }
+          fontFamily: { 
+            sans: ['Roboto', 'system-ui', 'sans-serif'], /* Fuente oficial para lectura */
+            serif: ['"Roboto Slab"', 'Georgia', 'serif'] /* Fuente oficial para títulos */
+          }
         }
       }
     }
   </script>
 
   <style>
-    @font-face {
-      font-family: 'gobCL';
-      src: url('fonts/gobCL_Regular.otf') format('opentype');
-      font-weight: normal;
-    }
-
-    @font-face {
-      font-family: 'gobCL';
-      src: url('fonts/gobCL_Bold.otf') format('opentype');
-      font-weight: bold;
-    }
-
     body {
-      font-family: 'gobCL', sans-serif !important;
+      color: #4A4A4A; 
     }
-
     .hero-pattern {
-      background-color: #0033a0;
+      background-color: #006FB3; 
       background-image: radial-gradient(#ffffff 1px, transparent 1px);
       background-size: 20px 20px;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
     }
   </style>
 </head>
@@ -95,7 +91,7 @@
           class="inline-block py-1 px-3 rounded-full bg-white/20 text-white text-sm font-semibold mb-6 border border-white/50 tracking-widest">
           HOSPITAL DR. GUSTAVO FRICKE - ECOSISTEMA DE INNOVACIÓN
         </span>
-        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
           Transformando la salud pública desde la <span class="border-b-4 border-gob-red">Innovación Hospitalaria</span>
         </h1>
         <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-200 mb-10">Diseñamos, asesoramos e implementamos iniciativas
